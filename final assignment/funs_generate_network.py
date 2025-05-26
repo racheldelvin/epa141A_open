@@ -63,7 +63,8 @@ def get_network(plann_steps_max=10):
         # location
         dikeid = 50001010
         G.nodes[dike]["f"] = np.column_stack(
-            (frag_curves.loc[:, "wl"].values, frag_curves.loc[:, dikeid].values)
+            (frag_curves.
+            loc[:, "wl"].values, frag_curves.loc[:, dikeid].values)
         )
         # Adjust fragility curves
         G.nodes[dike]["f"][:, 0] += calibration_factors.loc[dike].values
